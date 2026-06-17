@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог-доска</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <aside id="users-panel">
+            <h2>Авторы</h2>
+            <ul id="users-list"></ul>
+        </aside>
+        <main id="posts-panel">
+            <h2>Посты</h2>
+            <ul id="posts-list"></ul>
+        </main>
+        <section id="comments-panel">
+            <h2>Комментарии</h2>
+            <div id="comments-container">
+                <ul id="comments-list"></ul>
+                <form id="comment-form">
+                    <input type="text" id="comment-name" placeholder="Ваше имя" required>
+                    <textarea id="comment-body" placeholder="Текст комментария" required></textarea>
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
