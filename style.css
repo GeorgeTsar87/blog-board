@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: #f4f6fa;
+    padding: 1.5rem;
+}
+#app {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+#users-panel,
+#posts-panel,
+#comments-panel {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+#users-panel {
+    flex: 1;
+    min-width: 220px;
+}
+#posts-panel {
+    flex: 2;
+    min-width: 300px;
+}
+#comments-panel {
+    flex: 1.5;
+    min-width: 280px;
+}
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #0f172a;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+ul {
+    list-style: none;
+}
+.user-item,
+.post-item,
+.comment-item {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.user-item:hover,
+.post-item:hover {
+    background: #f8fafc;
+}
+.user-item.active {
+    background: #e0e7ff;
+    border-left: 4px solid #3b82f6;
+    font-weight: 500;
+}
+.post-item.active {
+    background: #eef2ff;
+    border-left: 4px solid #3b82f6;
+}
+.comment-item {
+    cursor: default;
+    background: #f8fafc;
+    margin-bottom: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.8rem 1rem;
+    border-bottom: none;
+}
+.comment-item strong {
+    color: #1e293b;
+}
+.loader {
+    text-align: center;
+    color: #64748b;
+    padding: 1rem;
+    font-style: italic;
+}
+.error {
+    color: #dc2626;
+    padding: 1rem;
+    text-align: center;
+}
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.2rem;
+}
+#comment-form input,
+#comment-form textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: 0.15s;
+}
+#comment-form input:focus,
+#comment-form textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+#comment-form button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s;
+}
+#comment-form button:hover {
+    background: #2563eb;
+}
+@media (max-width: 900px) {
+    #app {
+        flex-direction: column;
+    }
+    #users-panel,
+    #posts-panel,
+    #comments-panel {
+        width: 100%;
+    }
+}
